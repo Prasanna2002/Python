@@ -44,6 +44,15 @@ class doublelinkedlist(object):
         self.tail=self.tail.prev
         self.tail.next=None
         self.display-=1
+        
+     def search(self,i):
+        e=self.head
+        try:
+            while e.data!=i:
+                e=e.next
+            print(True)
+        except:
+            print(False)
 
     def removeduplicate(self):
         s=self.head
