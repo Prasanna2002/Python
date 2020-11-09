@@ -3,7 +3,7 @@ class Node(object):
         self.data=data
         self.next=None
 
-class SLL(object):
+class singlelinkedlist(object):
     def __init__(self):
         self.head=Node()
         self.duplicate=self.head
