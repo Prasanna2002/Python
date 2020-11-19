@@ -1,4 +1,4 @@
-x=[i for i in range(1,101)]
+x=list(map(int,input("Enter the Numbers:").split()))
 def binarysearch(x):
     search=int(input("Enter A Number: "))
     low=0 
