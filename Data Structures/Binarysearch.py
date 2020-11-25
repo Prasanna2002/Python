@@ -1,17 +1,12 @@
-x=list(map(int,input("Enter the Numbers:").split()))
-def binarysearch(x):
-    search=int(input("Enter A Number: "))
-    low=0 
+def binary_search(x,low,high,r):
     mid=0
-    high=len(x)-1 
     while mid<=high and mid<len(x)-1: 
         mid=(low+high)//2
-        if x[mid]>search: 
+        if x[mid]>r: 
             high=high-1 
-        elif x[mid]<search: 
+        elif x[mid]<r: 
             low=mid+1 
-        elif x[mid]==search: 
-            return x[mid]
+        elif x[mid]==r: 
+            return mid
     return -1 
 
-print(binarysearch(x))
