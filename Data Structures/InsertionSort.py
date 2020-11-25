@@ -1,5 +1,4 @@
-x=list(map(int,input().split())) 
-def insertionSort(x):
+ def insertionSort(x):
     for i in range(1,len(x)): 
         k=x[i] 
         j=i-1 
@@ -7,6 +6,5 @@ def insertionSort(x):
             x[j+1]=x[j] 
             j=j-1 
         x[j+1]=k 
-insertionSort(x) 
-print(x)
+
 
