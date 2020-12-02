@@ -9,9 +9,9 @@ pygame.mixer.init()
 screen=pygame.display.set_mode((700,700))  
 #loading icons,image of ship,enemy
 pygame.display.set_caption("Space Invaders") 
-icon=pygame.image.load("Pygame/icon.png")
+icon=pygame.image.load("icon.png")
 pygame.display.set_icon(icon)
-back_ground=pygame.image.load("Pygame/background.jpg")  
+back_ground=pygame.image.load("background.jpg")  
 #score
 Score=0
 level=1
@@ -20,31 +20,31 @@ score=pygame.font.Font('freesansbold.ttf',32)
 g_over=pygame.font.Font("freesansbold.ttf",64)
 over=g_over.render("Game Over",1,(255,255,255))
 #creating ship
-ship=pygame.image.load("Pygame/rocket.png") 
+ship=pygame.image.load("rocket.png") 
 shipX=340 
 shipY=620
 shipX_change=0
 shipY_change=0
 #creating enemy
-enemy=pygame.image.load("Pygame/enemy.png")
+enemy=pygame.image.load("enemy.png")
 enemyX=random.randint(10,500) 
 enemyY=random.randint(10,300) 
 enemyX_change=0.9
 #Loading bullet ,setting position of bullet
-bullet=pygame.image.load("Pygame/bullet.png") 
+bullet=pygame.image.load("bullet.png") 
 bulletX=shipX+15 
 bulletY=shipY+7
 bullet_state="ready"
 #enemy_bullet 
-e_bullet=pygame.image.load("Pygame/bullet (1).png") 
+e_bullet=pygame.image.load("bullet (1).png") 
 e_bulletX=enemyX+15
 e_bulletY=enemyY+15 
 #Loading in sounds 
-Warning_=pygame.mixer.Sound("Pygame/mixkit-classic-alarm-995.wav") 
-fire=pygame.mixer.Sound('Pygame/shoot.wav')
+Warning_=pygame.mixer.Sound("mixkit-classic-alarm-995.wav") 
+fire=pygame.mixer.Sound('shoot.wav')
 
-enemykilled=pygame.mixer.Sound("Pygame/invaderkilled.wav") 
-lll=pygame.mixer.Sound("Pygame/level.wav") 
+enemykilled=pygame.mixer.Sound("invaderkilled.wav") 
+lll=pygame.mixer.Sound("level.wav") 
 #Functions
 def get_score(): 
     scr=score.render("Score:"+str(Score),1,(255,255,255)) 
@@ -137,7 +137,7 @@ while run:
         run=False 
 
     if bulletdist<60 or (bulletdist+math.sqrt(enemy.get_width()))<60:
-       enemykilled.play() 
+       enemykilled.play()
        Score+=1 
        enemyX=random.randint(10,500) 
        enemyY=random.randint(10,300) 
