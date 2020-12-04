@@ -1,6 +1,5 @@
 def binary_search(x,low,high,r):
-    mid=0
-    while mid<=high and mid<len(x)-1: 
+    while low<=high:
         mid=(low+high)//2
         if x[mid]>r: 
             high=high-1 
